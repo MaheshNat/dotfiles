@@ -1,0 +1,9 @@
+#!/bin/sh
+
+{ 
+    nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{ print "📺 "$1"%, "}';
+    nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{ print "🧠 "$1" MiB/"}';
+    nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | awk '{ print ""$1" MiB, "}';
+    nvidia-smi --query-gpu=fan.speed --format=csv,noheader,nounits | awk '{ print "💨 "$1"%, "}';
+    nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits | awk '{ print "🔥 "$1"°C"}';
+} | tr -d "\n"

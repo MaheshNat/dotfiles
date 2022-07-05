@@ -1,0 +1,19 @@
+#! /bin/sh
+# 
+output="$(echo '' | rofi -dmenu -p -theme-str '@import "prompt.rasi"')";
+sleep 0.5
+
+if [ -z "$output" ]
+then
+    output="$HOME/pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
+else
+	output="$HOME/pictures/screenshots/"$output".png"
+fi
+
+case "$1" in
+	"select") scrot "$output" --select --line mode=edge || exit ;;
+	"window") scrot "$output" --focused --border || exit ;;
+	*) scrot "$output" || exit ;;
+esac
+
+notify-send "Screenshot taken."

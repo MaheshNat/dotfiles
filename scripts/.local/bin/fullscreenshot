@@ -1,0 +1,6 @@
+#!/bin/sh
+
+output="$HOME/pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
+
+scrot "$output"
+notify-send "Screenshot taken."

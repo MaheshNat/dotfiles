@@ -1,0 +1,6 @@
+#!/bin/sh
+
+{ 
+    sensors | grep "Tctl:" | tr -d '+' | awk '{print "🔥 "$2", "}';
+    sensors | grep "fan2:" | awk '{printf "💨 %0.0f%", $2/2000*100}'
+} | tr -d "\n"

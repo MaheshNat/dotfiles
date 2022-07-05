@@ -1,0 +1,6 @@
+#!/bin/sh
+
+{ 
+    df /dev/nvme0n1p5 -h | grep '/dev/nvme0n1p5' | awk '{print "💽 "$3"/"}';
+    df /dev/nvme0n1p5 -h | grep '/dev/nvme0n1p5' | awk '{print ""$2""}';
+} | tr -d "\n"

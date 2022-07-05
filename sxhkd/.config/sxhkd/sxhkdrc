@@ -1,0 +1,120 @@
+#
+# scripts
+#
+
+# printscreen
+@Print
+	$HOME/.local/bin/fullscreenshot
+shift + @Print
+	$HOME/.local/bin/screenshot select
+control + @Print
+	$HOME/.local/bin/screenshot window
+
+# volume buttons
+XF86AudioRaiseVolume
+    $HOME/.local/bin/changevolume up
+XF86AudioLowerVolume
+    $HOME/.local/bin/changevolume down
+XF86AudioMute
+    $HOME/.local/bin/changevolume mute
+
+# power menu
+super + p
+	$HOME/.local/bin/powermenu
+
+# restarts
+super + shift + p
+	$HOME/.config/polybar/launch.sh
+
+# generates random password from bitwarden, copies to clipboard
+# super + b
+#	bw generate --lowercase --uppercase --number --special --length 30 | xclip -selection clipboard
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# rofi
+super + shift + e
+	rofimoji
+super + shift + c
+	rofi -show calc -no-show-match -no-sort
+
+# terminal emulator
+super + Return
+	alacritty
+
+# file manager
+super + shift + f
+	pcmanfm
+
+# program launcher
+~Super_L ; ~Super_L
+	rofi -terminal alacritty -show drun
+
+# notifications
+# ctrl + space
+#   dunstctl close
+# ctrl + shift + space
+#   dunstctl close-all
+# ctrl + shift + period
+#   dunstctl context
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+#
+# state/flags
+#
+
+super + f
+	bspc node focused.tiled -t fullscreen || bspc node focused.fullscreen -t tiled
+super + t
+	bspc node focused.floating -t tiled
+super + s
+	bspc node focused.tiled -t floating
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
+# focus the next/previous desktop in the current monitor
+super + shift + {Left,Right}
+	bspc desktop -f {prev,next}.local
+alt + Tab
+	bspc node last -f last.\!hidden -f last.\!same_class 
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc monitor -f {west,east}
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+super + d
+	bspc desktop -f 4 && bspc desktop -f 8
+super + shift + d
+	bspc desktop -f 1 && bspc desktop -f 5
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
