@@ -112,6 +112,19 @@ export MANGOHUD_CONFIGFILE=$HOME/.config/MangoHud/MangoHud.conf
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias stowalladopt="cd ~/dotfiles && stow --adopt -vt ~ */ --no-folding"
 alias stowall="cd ~/dotfiles && stow -vt ~ */ --no-folding"
+alias venv="python3 -m venv env && source env/bin/activate"
+
+declare -A diraliases=(
+	["dotfiles"]="$HOME/dotfiles"
+	["docs"]="$HOME/documents"
+	["config"]="$XDG_CONFIG_HOME"
+  ["cdss"]="$HOME/pictures/screenshots"
+  ["cdrsb"]="$HOME/documents/tutorials/rust-book"
+)
+
+for key value in "${(@kv)diraliases}"; do
+	alias $key="cd \"$value\""
+done
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -4,12 +4,8 @@
 
 # printscreen
 @Print
-	$HOME/.local/bin/fullscreenshot
-shift + @Print
-	$HOME/.local/bin/screenshot select
-control + @Print
-	$HOME/.local/bin/screenshot window
-
+	$HOME/.local/bin/screenshot
+	
 # media keys
 XF86Audio{Prev, Next}
 	playerctl {previous, next}
