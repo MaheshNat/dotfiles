@@ -2,9 +2,9 @@
 
 ## Contents
 
+- Distro: [Arch Linux](https://archlinux.org/)
 - Terminal: [alacritty](https://github.com/alacritty/alacritty)
 - Browser: [brave](https://github.com/brave/brave-browser)
-- Distro: [Arch Linux](https://archlinux.org/)
 - Tiling Window Manager: [bspwm](https://github.com/baskerville/bspwm)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Terminal File Manager: [lf](https://github.com/gokcehan/lf)
@@ -29,7 +29,7 @@ You must create a `scripts/.local/bin/.env` file acoording to `scripts/.local/bi
 ## Extras
 
 Dual monitor wallpapers included in the wallpapers directory!
-My OBS recording settings and xdg-mime apps (soon to be actually filled out) are also included.
+My OBS recording settings and xdg-mime apps are also included.
 
 ## PS
 

@@ -5,6 +5,20 @@ x-scheme-handler/http=brave-browser.desktop
 x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/unknown=brave-browser.desktop
+application/json=visual-studio-code.desktop
+application/pdf=brave-browser.desktop
+application/x-shellscript=visual-studio-code.desktop
+image/gif=brave-browser.desktop
+image/jpeg=brave-browser.desktop
+image/jpg=brave-browser.desktop
+image/png=brave-browser.desktop
+image/svg+xml=brave-browser.desktop
+text/html=visual-studio-code.desktop
+text/plain=visual-studio-code.desktop
+text/xml=visual-studio-code.desktop
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+
 
 [Added Associations]
 text/plain=brave-browser.desktop;
