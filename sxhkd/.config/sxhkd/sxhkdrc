@@ -10,6 +10,16 @@ shift + @Print
 control + @Print
 	$HOME/.local/bin/screenshot window
 
+# media keys
+XF86Audio{Prev, Next}
+	playerctl {previous, next}
+XF86AudioPlay
+	playerctl play-pause
+{F6, F8}
+	playerctl {previous, next}
+F7
+	playerctl play-pause
+
 # volume buttons
 XF86AudioRaiseVolume
     $HOME/.local/bin/changevolume up

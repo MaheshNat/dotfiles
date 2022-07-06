@@ -13,4 +13,5 @@ discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-feat
 ckb-next &
 nm-applet &
 redshift-gtk &
+playerctld daemon &
 exec bspwm

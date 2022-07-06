@@ -24,7 +24,7 @@
 
 ## Using Weather API For Polybar
 
-You must create a `scripts/.local/bin/.env` file acoording to `scripts/.local/bin/.env.example` in order for the weather polybar module to work.
+You must create a `scripts/.local/bin/.env` file according to `scripts/.local/bin/.env.example` in order for the weather polybar module to work.
 
 ## Extras
 
