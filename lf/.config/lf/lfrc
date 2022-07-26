@@ -88,5 +88,5 @@ map gD cd ~/Downloads
 map gp cd ~/pictures
 map gc cd ~/.config
 map gv cd ~/videos/
-map gs cd ~/.local/bin
-map gS cd ~/pictures/screenshots
+map gs cd ~/pictures/screenshots
+map gp cd ~/documents/projects
