@@ -16,5 +16,13 @@
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "prettier.jsxSingleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "git.autofetch": true
 }
