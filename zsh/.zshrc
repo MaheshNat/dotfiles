@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions vi-mode)
+plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions vi-mode zsh-history-substring-search auto-notify)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,6 +131,8 @@ alias stowall="cd ~/dotfiles && stow -vt ~ */ --no-folding"
 alias venv="python3 -m venv env && source env/bin/activate"
 alias gitp="gitpfunction"
 alias gitpf="gitpffunction"
+alias dpac="paccache -dvk2"
+alias rpac="paccache -rvk2"
 
 declare -A diraliases=(
 	["dotfiles"]="$HOME/dotfiles"
