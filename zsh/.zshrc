@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions vi-mode zsh-history-substring-search auto-notify)
+plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions vi-mode zsh-history-substring-search auto-notify sudo dirhistory)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,18 +134,13 @@ alias gitpf="gitpffunction"
 alias dpac="paccache -dvk2"
 alias rpac="paccache -rvk2"
 
-declare -A diraliases=(
-	["dotfiles"]="$HOME/dotfiles"
-	["docs"]="$HOME/documents"
-	["config"]="$XDG_CONFIG_HOME"
-  ["cdss"]="$HOME/pictures/screenshots"
-  ["cdrsb"]="$HOME/documents/tutorials/rust-book"
-  ["proj"]="$HOME/documents/projects"
-)
-
-for key value in "${(@kv)diraliases}"; do
-	alias $key="cd \"$value\""
-done
+alias dotfiles="cd $HOME/dotfiles"
+alias dotfiles="cd $HOME/dotfiles"
+alias docs="cd $HOME/documents"
+alias config="cd $XDG_CONFIG_HOME"
+alias cdss="cd $HOME/pictures/screenshots"
+alias cdrsb="cd $HOME/documents/tutorials/rust-book"
+alias proj="cd $HOME/documents/projects"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
