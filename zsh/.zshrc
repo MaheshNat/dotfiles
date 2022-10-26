@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,6 +86,9 @@ source $ZSH/oh-my-zsh.sh
 export LIBVA_DRIVER_NAME=nvidia
 export VDPAU_DRIVER=nvidia
 export MANGOHUD_CONFIGFILE=$HOME/.config/MangoHud/MangoHud.conf
+
+# enable vi mode
+bindkey -v
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -110,9 +113,24 @@ export MANGOHUD_CONFIGFILE=$HOME/.config/MangoHud/MangoHud.conf
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+mgrokfunction() {
+  ssh -N -R localhost:4242:localhost:$1 ubuntu@tunnel.maheshnatamai.com
+}
+
+gitpfunction() {
+  git add . && git commit -m $1 && git push
+}
+
+gitpffunction() {
+  git add . && git commit -m $1 && git push -u origin master
+}
+
+alias mgrok='mgrokfunction'
 alias stowalladopt="cd ~/dotfiles && stow --adopt -vt ~ */ --no-folding"
 alias stowall="cd ~/dotfiles && stow -vt ~ */ --no-folding"
 alias venv="python3 -m venv env && source env/bin/activate"
+alias gitp="gitpfunction"
+alias gitpf="gitpffunction"
 
 declare -A diraliases=(
 	["dotfiles"]="$HOME/dotfiles"
@@ -120,6 +138,7 @@ declare -A diraliases=(
 	["config"]="$XDG_CONFIG_HOME"
   ["cdss"]="$HOME/pictures/screenshots"
   ["cdrsb"]="$HOME/documents/tutorials/rust-book"
+  ["proj"]="$HOME/documents/projects"
 )
 
 for key value in "${(@kv)diraliases}"; do
@@ -130,3 +149,32 @@ done
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/nvm/init-nvm.sh
+
+
+# JINA_CLI_BEGIN
+
+## autocomplete
+if [[ ! -o interactive ]]; then
+    return
+fi
+
+compctl -K _jina jina
+
+_jina() {
+  local words completions
+  read -cA words
+
+  if [ "${#words}" -eq 2 ]; then
+    completions="$(jina commands)"
+  else
+    completions="$(jina completions ${words[2,-2]})"
+  fi
+
+  reply=(${(ps:\n:)completions})
+}
+
+# session-wise fix
+ulimit -n 4096
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# JINA_CLI_END

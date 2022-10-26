@@ -1,4 +1,3 @@
-set hidden
 set ignorecase
 set icons
 set colors
@@ -90,3 +89,4 @@ map gc cd ~/.config
 map gv cd ~/videos/
 map gs cd ~/pictures/screenshots
 map gp cd ~/documents/projects
+map gh cd ~/

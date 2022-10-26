@@ -24,5 +24,7 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "python.defaultInterpreterPath": "/home/mahesh/Downloads/env/bin/python"
 }
