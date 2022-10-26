@@ -1,0 +1,5 @@
+#! /bin/sh
+
+chosen=$(sed -n '/^alias/p' .zshrc | cut -c 7- | rofi -dmenu -i -theme-str '@import "power.rasi"')
+
+echo $chosen | cut -d'=' -f1 | xclip -sel clip

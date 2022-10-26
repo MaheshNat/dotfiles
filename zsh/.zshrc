@@ -125,7 +125,7 @@ gitpffunction() {
   git add . && git commit -m $1 && git push -u origin master
 }
 
-alias mgrok='mgrokfunction'
+alias mgrok="mgrokfunction"
 alias stowalladopt="cd ~/dotfiles && stow --adopt -vt ~ */ --no-folding"
 alias stowall="cd ~/dotfiles && stow -vt ~ */ --no-folding"
 alias venv="python3 -m venv env && source env/bin/activate"

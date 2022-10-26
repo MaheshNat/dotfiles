@@ -1,7 +1,6 @@
 # ~/.config/betterlockscreenrc
 
 # default options
-display_on=0
 span_image=true
 lock_timeout=300
 fx_list=(dim blur dimblur pixel dimpixel color)

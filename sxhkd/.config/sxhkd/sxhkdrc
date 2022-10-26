@@ -25,6 +25,10 @@ XF86AudioMute
     $HOME/.local/bin/changevolume mute
 
 # power menu
+super + a
+	$HOME/.local/bin/aliases
+
+# alias menu
 super + p
 	$HOME/.local/bin/powermenu
 
