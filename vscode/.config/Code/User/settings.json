@@ -26,5 +26,11 @@
   "prettier.singleQuote": true,
   "git.autofetch": true,
   "liveServer.settings.donotVerifyTags": true,
-  "python.defaultInterpreterPath": "/home/mahesh/Downloads/env/bin/python"
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": []
 }
