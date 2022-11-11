@@ -13,7 +13,7 @@ ckb-next &
 discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy &
 blueberry &
 setxkbmap -option "caps:escape_shifted_capslock" &
-xsetroot -cursor_name left_ptr &
+xsetroot -cursor_name left_ptr
 
 bspc monitor DP-1 -d 1 2 3 4
 bspc monitor HDMI-0 -d 5 6 7 8
