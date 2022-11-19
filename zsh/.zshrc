@@ -81,15 +81,6 @@ plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions vi-mode zsh-h
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export LIBVA_DRIVER_NAME=nvidia
-export VDPAU_DRIVER=nvidia
-export MANGOHUD_CONFIGFILE=$HOME/.config/MangoHud/MangoHud.conf
-
-# enable vi mode
-bindkey -v
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -99,79 +90,19 @@ bindkey -v
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi\
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-mgrokfunction() {
-  ssh -N -R localhost:4242:localhost:$1 ubuntu@tunnel.maheshnatamai.com
-}
+[ -f $HOME/.config/zsh/exports.zsh ] && source $HOME/.config/zsh/exports.zsh
+[ -f $HOME/.config/zsh/functions.zsh ] && source $HOME/.config/zsh/functions.zsh
+[ -f $HOME/.config/zsh/aliases.zsh ] && source $HOME/.config/zsh/aliases.zsh
 
-gitpfunction() {
-  git add . && git commit -m $1 && git push
-}
-
-gitpffunction() {
-  git add . && git commit -m $1 && git push -u origin master
-}
-
-alias mgrok="mgrokfunction"
-alias stowalladopt="cd ~/dotfiles && stow --adopt -vt ~ */ --no-folding"
-alias stowall="cd ~/dotfiles && stow -vt ~ */ --no-folding"
-alias venv="python3 -m venv env && source env/bin/activate"
-alias gitp="gitpfunction"
-alias gitpf="gitpffunction"
-alias dpac="paccache -dvk2"
-alias rpac="paccache -rvk2"
-
-alias dotfiles="cd $HOME/dotfiles"
-alias dotfiles="cd $HOME/dotfiles"
-alias docs="cd $HOME/documents"
-alias config="cd $XDG_CONFIG_HOME"
-alias cdss="cd $HOME/pictures/screenshots"
-alias cdrsb="cd $HOME/documents/tutorials/rust-book"
-alias proj="cd $HOME/documents/projects"
+# enable vi mode
+bindkey -v
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/nvm/init-nvm.sh
-source /usr/share/nvm/init-nvm.sh
-
-
-# JINA_CLI_BEGIN
-
-## autocomplete
-if [[ ! -o interactive ]]; then
-    return
-fi
-
-compctl -K _jina jina
-
-_jina() {
-  local words completions
-  read -cA words
-
-  if [ "${#words}" -eq 2 ]; then
-    completions="$(jina commands)"
-  else
-    completions="$(jina completions ${words[2,-2]})"
-  fi
-
-  reply=(${(ps:\n:)completions})
-}
-
-# session-wise fix
-ulimit -n 4096
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-# JINA_CLI_END

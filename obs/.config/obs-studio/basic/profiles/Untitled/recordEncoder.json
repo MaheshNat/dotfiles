@@ -1,1 +1,1 @@
-{"bitrate":6000,"cqp":14,"keyint_sec":2,"max_bitrate":50,"preset":"mq","profile":"high","rate_control":"CQP"}
+{"bitrate":6000,"cqp":14,"keyint_sec":2,"max_bitrate":50,"multipass":"qres","preset":"mq","preset2":"p5","profile":"high","rate_control":"CQP","tune":"hq"}
