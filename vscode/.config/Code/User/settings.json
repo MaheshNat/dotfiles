@@ -32,5 +32,6 @@
       "after": ["<Esc>"]
     }
   ],
-  "vim.operatorPendingModeKeyBindings": []
+  "vim.operatorPendingModeKeyBindings": [],
+  "diffEditor.ignoreTrimWhitespace": false
 }
