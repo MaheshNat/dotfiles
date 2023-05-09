@@ -33,5 +33,12 @@
     }
   ],
   "vim.operatorPendingModeKeyBindings": [],
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false
+  }
 }

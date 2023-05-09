@@ -32,6 +32,10 @@ super + a
 super + p
 	$HOME/.local/bin/powermenu
 
+# kill process by x window
+super + x
+	xkill
+
 # restarts
 super + shift + p
 	$HOME/.config/polybar/launch.sh
