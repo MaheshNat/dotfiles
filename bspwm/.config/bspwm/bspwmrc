@@ -15,8 +15,8 @@ setxkbmap -option "caps:escape_shifted_capslock" &
 xsetroot -cursor_name left_ptr &
 picom --experimental-backends
 
-bspc monitor DP-1 -d 1 2 3 4
-bspc monitor HDMI-0 -d 5 6 7 8
+# bspc monitor DP-1 -d 1 2 3 4
+bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8
 
 bspc config border_width         2
 bspc config window_gap          10
