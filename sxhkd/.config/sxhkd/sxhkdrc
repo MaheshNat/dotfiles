@@ -11,9 +11,9 @@ XF86Audio{Prev, Next}
 	playerctl {previous, next}
 XF86AudioPlay
 	playerctl play-pause
-{F6, F8}
+{F7, F9}
 	playerctl {previous, next}
-F7
+F8
 	playerctl play-pause
 
 # volume buttons
@@ -41,8 +41,8 @@ super + shift + p
 	$HOME/.config/polybar/launch.sh
 
 # generates random password from bitwarden, copies to clipboard
-# super + b
-#	bw generate --lowercase --uppercase --number --special --length 30 | xclip -selection clipboard
+super + b
+	bw generate --lowercase --uppercase --number --special --length 34 | xclip -selection clipboard
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -63,7 +63,7 @@ super + shift + f
 	pcmanfm
 
 # program launcher
-~Super_L ; ~Super_L
+super + space
 	rofi -terminal alacritty -show drun
 
 # notifications
@@ -102,7 +102,7 @@ super + s
 
 # focus the node in the given direction
 super + {Left,Down,Up,Right}
-	bspc node -f {west,south,north,east}
+	bspc monitor -f {west,south,north,east}
 # focus the next/previous desktop in the current monitor
 super + shift + {Left,Right}
 	bspc desktop -f {prev,next}.local
@@ -115,9 +115,9 @@ super + {grave,Tab}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 super + d
-	bspc desktop -f 4 && bspc desktop -f 8
+	bspc desktop -f 5 && bspc desktop -f 0
 super + shift + d
-	bspc desktop -f 1 && bspc desktop -f 5
+	bspc desktop -f 1 && bspc desktop -f 6
 
 #
 # move/resize

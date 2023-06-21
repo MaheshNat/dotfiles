@@ -42,5 +42,6 @@
     "yaml": false
   },
   "docker.dockerPath": "/usr/local/bin/docker",
-  "settingsSync.ignoredSettings": ["-docker.dockerPath"]
+  "settingsSync.ignoredSettings": ["-docker.dockerPath"],
+  "git.openRepositoryInParentFolders": "never"
 }

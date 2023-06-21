@@ -22,8 +22,9 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 " Plug 'https://github.com/terrortylor/nvim-comment'
 
 set encoding=UTF-8
+set clipboard+=unnamedplus
 
-call plug#end()
+" call plug#end()
 
 "  nnoremap <C-f> :NERDTreeFocus<CR>
 "  nnoremap <C-n> :NERDTree<CR>
@@ -34,7 +35,7 @@ call plug#end()
 
 "  :set completeopt-=preview " For No Previews
 
-colorscheme onedark
+" colorscheme onedark
 
 "  let g:NERDTreeDirArrowExpandable="+"
 "  let g:NERDTreeDirArrowCollapsible="~"
