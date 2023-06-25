@@ -13,11 +13,14 @@ image/jpeg=brave-browser.desktop
 image/jpg=brave-browser.desktop
 image/png=brave-browser.desktop
 image/svg+xml=brave-browser.desktop
+image/heic=gimp.desktop
 text/html=visual-studio-code.desktop
 text/plain=visual-studio-code.desktop
 text/xml=visual-studio-code.desktop
 video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
+video/quicktime=mpv.desktop
+
 
 [Added Associations]
 text/plain=brave-browser.desktop;
