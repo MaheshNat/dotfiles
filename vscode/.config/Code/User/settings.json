@@ -36,12 +36,13 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
+    "plaintext": true,
     "markdown": false,
     "scminput": false,
     "yaml": false
   },
   "docker.dockerPath": "/usr/local/bin/docker",
   "settingsSync.ignoredSettings": ["-docker.dockerPath"],
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim"
 }
