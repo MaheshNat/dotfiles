@@ -6,6 +6,10 @@ function mgrok() {
   ssh -N -R localhost:4242:localhost:$1 ubuntu@tunnel.maheshnatamai.com;
 }
 
+function agrok() {
+  ssh -N -R localhost:4242:localhost:$1 mahesh@tunnel.automorphic.ai;
+}
+
 function gitp() {
   git add . && git commit -m $1 && git push;
 }

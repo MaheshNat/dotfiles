@@ -33,16 +33,16 @@
     }
   ],
   "vim.operatorPendingModeKeyBindings": [],
-  "diffEditor.ignoreTrimWhitespace": false,
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
-    "markdown": false,
+    "markdown": true,
     "scminput": false,
     "yaml": false
   },
   "docker.dockerPath": "/usr/local/bin/docker",
   "settingsSync.ignoredSettings": ["-docker.dockerPath"],
   "git.openRepositoryInParentFolders": "never",
-  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim"
+  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+  "diffEditor.ignoreTrimWhitespace": false
 }
