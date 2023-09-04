@@ -11,5 +11,10 @@
     "key": "k",
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "k"
+  },
+  {
+    "command": "editor.toggleFold",
+    "key": "j l",
+    "when": "editorTextFocus && neovim.mode == normal"
   }
 ]

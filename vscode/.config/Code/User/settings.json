@@ -20,6 +20,7 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
+  "python.formatting.provider": "black",
   "prettier.jsxSingleQuote": true,
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
@@ -44,5 +45,7 @@
   "settingsSync.ignoredSettings": ["-docker.dockerPath"],
   "git.openRepositoryInParentFolders": "never",
   "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "notebook.output.scrolling": true,
+  "python.analysis.autoImportCompletions": true
 }
