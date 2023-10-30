@@ -12,7 +12,7 @@ alias venv="python3 -m venv env && source env/bin/activate"
 alias senv="source env/bin/activate"
 alias dpac="paccache -dvk2"
 alias rpac="paccache -rvk2"
-
+alias capswitch="setxkbmap -option \"caps:escape_shifted_capslock\""
 # Directory aliases
 alias cdots="cd $HOME/dotfiles"
 alias cdocs="cd $HOME/documents"

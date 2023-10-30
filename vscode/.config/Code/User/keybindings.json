@@ -14,7 +14,7 @@
   },
   {
     "command": "editor.toggleFold",
-    "key": "j l",
+    "key": "z z",
     "when": "editorTextFocus && neovim.mode == normal"
   }
 ]

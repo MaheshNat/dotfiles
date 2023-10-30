@@ -2,6 +2,7 @@
   "telemetry.telemetryLevel": "off",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro Darker",
+  "editor.lineNumbers": "relative",
   "editor.bracketPairColorization.enabled": true,
   "editor.inlineSuggest.enabled": true,
   "editor.formatOnSave": true,
@@ -45,7 +46,17 @@
   "settingsSync.ignoredSettings": ["-docker.dockerPath"],
   "git.openRepositoryInParentFolders": "never",
   "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
-  "diffEditor.ignoreTrimWhitespace": false,
   "notebook.output.scrolling": true,
-  "python.analysis.autoImportCompletions": true
+  "python.analysis.autoImportCompletions": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "cmake.configureOnOpen": false
 }
