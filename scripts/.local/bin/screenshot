@@ -25,7 +25,7 @@ case "$chosen" in
 esac
 
 if [ "$use_flameshot" = true ]; then
-    flameshot gui -p "$save_location" -r > /dev/null
+    flameshot gui -p "$save_location" -r --clipboard > /dev/null
     exit 0
 fi
 
