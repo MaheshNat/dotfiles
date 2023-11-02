@@ -19,10 +19,15 @@ chosen=$(printf '%s;%s;%s\n' "$screen" "$area" "$window" \
 
 case "$chosen" in
     "$screen") extra_args='--delay=1' ;;
-    "$area")   extra_args='--delay=0.1 --select --highlight --color=0.85,0.87,0.91,0.6' ;;
+    "$area")   extra_args='--delay=0.1 --select --highlight --color=0.85,0.87,0.91,0.6' use_flameshot=true ;;
     "$window") extra_args="--delay=1 --window=$(xdotool getactivewindow)" ;;
     *)         exit 1 ;;
 esac
+
+if [ "$use_flameshot" = true ]; then
+    flameshot gui -p "$save_location" -r > /dev/null
+    exit 0
+fi
 
 # The variable is used as a command's options, so it shouldn't be quoted.
 # shellcheck disable=2086
