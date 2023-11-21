@@ -2,7 +2,7 @@
 
 bspc monitor DP-1 -d 1 2 3 4 5
 bspc monitor HDMI-0 -d 6 7 8 9 0
-bspc monitor DP-2
+bspc monitor DP-2 -d 1 2 3 4 5
 
 bspc config border_width         2
 bspc config window_gap          10
