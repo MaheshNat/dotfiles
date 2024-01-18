@@ -11,8 +11,8 @@
   "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.sortImports": true
+    "source.fixAll": "explicit",
+    "source.sortImports": "explicit"
   },
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
@@ -22,7 +22,7 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "isort.args": ["--profile", "black"],
