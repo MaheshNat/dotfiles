@@ -67,5 +67,6 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "cmake.configureOnOpen": false
+  "cmake.configureOnOpen": false,
+  "remote.autoForwardPortsSource": "hybrid"
 }
