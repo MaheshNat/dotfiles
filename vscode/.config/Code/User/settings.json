@@ -33,17 +33,17 @@
   },
   "prettier.jsxSingleQuote": true,
   "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
+
+  "[typescript]": {
+    "preferences.quoteStyle": "single",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    }
+  },
   "prettier.singleQuote": true,
   "git.autofetch": true,
   "liveServer.settings.donotVerifyTags": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.operatorPendingModeKeyBindings": [],
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
