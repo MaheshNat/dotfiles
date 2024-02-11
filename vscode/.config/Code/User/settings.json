@@ -36,6 +36,7 @@
 
   "[typescript]": {
     "preferences.quoteStyle": "single",
+    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit",
       "source.fixAll": "explicit"
@@ -68,5 +69,8 @@
     "asvetliakov.vscode-neovim": 1
   },
   "cmake.configureOnOpen": false,
-  "remote.autoForwardPortsSource": "hybrid"
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }
