@@ -21,9 +21,9 @@ video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
 video/quicktime=mpv.desktop
 
-
 [Added Associations]
 text/plain=brave-browser.desktop;
 application/octet-stream=gimp.desktop;
 image/jpeg=visual-studio-code.desktop;
 video/x-matroska=brave-browser.desktop;
+application/pdf=libreoffice-startcenter.desktop;

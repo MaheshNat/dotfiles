@@ -12,8 +12,15 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.sortImports": "explicit"
+    "source.sortImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
@@ -31,18 +38,15 @@
     "notebook.source.fixAll": true,
     "notebook.source.organizeImports": true
   },
-  "prettier.jsxSingleQuote": true,
   "javascript.preferences.quoteStyle": "single",
 
   "[typescript]": {
-    "preferences.quoteStyle": "single",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit",
       "source.fixAll": "explicit"
     }
   },
-  "prettier.singleQuote": true,
   "git.autofetch": true,
   "liveServer.settings.donotVerifyTags": true,
   "github.copilot.enable": {
