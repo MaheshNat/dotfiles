@@ -9,18 +9,16 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
-  "liveServer.settings.donotShowInfoMsg": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.sortImports": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.sortImports": "explicit"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  // "eslint.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   "typescript",
+  //   "typescriptreact"
+  // ],
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
@@ -44,7 +42,8 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit",
-      "source.fixAll": "explicit"
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "explicit"
     }
   },
   "git.autofetch": true,
@@ -63,7 +62,7 @@
   "notebook.output.scrolling": true,
   "python.analysis.autoImportCompletions": true,
   "notebook.cellToolbarLocation": {
-    "default": "right",
+    "default": "left",
     "jupyter-notebook": "left"
   },
   "[json]": {
@@ -76,5 +75,14 @@
   "remote.autoForwardPortsSource": "hybrid",
   "editor.quickSuggestions": {
     "strings": "on"
+  },
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.lua",
+      "args": [
+        "vim.api.nvim_input('<ESC>')\nrequire('vscode-neovim').action('workbench.action.files.save')"
+      ]
+    }
   }
+  // "sqltools.useNodeRuntime": false
 }

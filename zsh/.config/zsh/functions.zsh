@@ -10,6 +10,10 @@ function agrok() {
   ssh -N -R localhost:4242:localhost:$1 mahesh@tunnel.automorphic.ai;
 }
 
+function acgrok() {
+  ssh -N -R localhost:4545:localhost:$1 mahesh@api.automorphic.ai
+}
+
 function gitp() {
   git add . && git commit -m $1 && git push;
 }

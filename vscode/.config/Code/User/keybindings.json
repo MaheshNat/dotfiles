@@ -1,22 +1,22 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "command": "vscode-neovim.compositeEscape1",
-    "key": "j",
-    "when": "neovim.mode == insert && editorTextFocus",
-    "args": "j"
-  },
-  {
-    "command": "vscode-neovim.compositeEscape2",
-    "key": "k",
-    "when": "neovim.mode == insert && editorTextFocus",
-    "args": "k"
-  },
   // {
-  //   "command": "editor.toggleFold",
-  //   "key": "z z",
-  //   "when": "editorTextFocus && neovim.mode == normal"
+  //   "command": "vscode-neovim.compositeEscape1",
+  //   "key": "j",
+  //   "when": "neovim.mode == insert && editorTextFocus",
+  //   "args": "j"
   // },
+  // {
+  //   "command": "vscode-neovim.compositeEscape2",
+  //   "key": "k",
+  //   "when": "neovim.mode == insert && editorTextFocus",
+  //   "args": "k"
+  // },
+  {
+    "command": "editor.toggleFold",
+    "key": "z z",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
   {
     "key": "ctrl+c",
     "command": "-vscode-neovim.escape",
