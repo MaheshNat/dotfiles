@@ -107,4 +107,4 @@ bindkey -v
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/nvm/init-nvm.sh
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
