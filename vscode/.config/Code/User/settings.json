@@ -53,7 +53,7 @@
     "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "yaml": false
+    "yaml": true
   },
   "docker.dockerPath": "/usr/local/bin/docker",
   "settingsSync.ignoredSettings": ["-docker.dockerPath"],
@@ -76,13 +76,9 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "vscode-neovim.compositeKeys": {
-    "jk": {
-      "command": "vscode-neovim.lua",
-      "args": [
-        "vim.api.nvim_input('<ESC>')\nrequire('vscode-neovim').action('workbench.action.files.save')"
-      ]
-    }
-  }
+  "security.promptForLocalFileProtocolHandling": false,
+  "notebook.lineNumbers": "on",
+  "prisma.showPrismaDataPlatformNotification": false,
+  "jupyter.logging.level": "error"
   // "sqltools.useNodeRuntime": false
 }
