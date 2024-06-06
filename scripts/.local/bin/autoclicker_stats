@@ -1,0 +1,18 @@
+#!/bin/sh
+
+while true; do
+  if [ -f /tmp/autoclicker_stats ]; then
+    stats=$(cat /tmp/autoclicker_stats)
+    elapsed_time=$(echo "$stats" | cut -d',' -f1)
+    interval=$(echo "$stats" | cut -d',' -f2)
+    clicks=$(echo "$stats" | cut -d',' -f3)
+
+    elapsed_time_formatted=$(printf '%02dh:%02dm:%02ds\n' $((elapsed_time/3600)) $((elapsed_time%3600/60)) $((elapsed_time%60)))
+
+    echo "⌚$elapsed_time_formatted, ⌛${interval}s, 🖱️$clicks"
+  else
+    echo ""
+  fi
+
+  sleep 1
+done

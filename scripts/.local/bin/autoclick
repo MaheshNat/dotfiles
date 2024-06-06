@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# Function to convert time to seconds
+convert_to_seconds() {
+  if echo "$1" | grep -qE '^[0-9]+$'; then
+    echo "$1"
+  elif echo "$1" | grep -qE '^[0-9]+\.[0-9]+$'; then
+    echo "$1"
+  else
+    echo "Invalid input format. Please provide a valid number."
+    exit 1
+  fi
+}
+
+# Prompt user for interval using rofi
+interval=$(printf "  Enderman Farm (0.5s)\n  Awake (15s)\n  Custom Interval" | rofi -dmenu -i -p "Select Interval")
+
+# Check if the user pressed escape or closed the rofi modal
+if [ $? -eq 1 ]; then
+  echo "Autoclicker execution cancelled by the user."
+  exit 0
+fi
+
+case "$interval" in
+  "  Enderman Farm (0.5s)") interval_seconds=$(convert_to_seconds 0.5) ;;
+  "  Awake (15s)") interval_seconds=$(convert_to_seconds 15) ;;
+  "  Custom Interval")
+    custom_interval=$(echo "" | rofi -dmenu -p "Enter Interval (in seconds) > ")
+    # Check if the user pressed escape or closed the rofi modal
+    if [ $? -eq 1 ]; then
+      echo "Autoclicker execution cancelled by the user."
+      exit 0
+    fi
+    interval_seconds=$(convert_to_seconds "$custom_interval")
+    ;;
+  *) exit 1 ;;
+esac
+
+eval $(xdotool getmouselocation --shell)
+echo $X $Y
+x1=$X
+y1=$Y
+COUNTER=1
+COUNTEND=100000
+
+start_time=$(date +%s)
+
+while [ $COUNTER -lt $COUNTEND ]; do
+  echo "Click $COUNTER"
+  xdotool click 1
+  eval $(xdotool getmouselocation --shell)
+  # Cancel if mouse moved
+  if [ $x1 != $X ] || [ $y1 != $Y ]; then
+    echo "Mouse moved - script terminated"
+    rm -f /tmp/autoclicker_stats
+    exit 1
+  fi
+  # Write autoclicker stats to a temporary file
+  current_time=$(date +%s)
+  elapsed_time=$((current_time - start_time))
+  echo "$elapsed_time,$interval_seconds,$COUNTER" > /tmp/autoclicker_stats
+  # Sleep for the specified interval in seconds
+  sleep "$interval_seconds"
+  let COUNTER=COUNTER+1
+done
+
+rm -f /tmp/autoclicker_stats

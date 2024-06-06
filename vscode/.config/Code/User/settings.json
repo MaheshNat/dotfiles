@@ -79,6 +79,7 @@
   "security.promptForLocalFileProtocolHandling": false,
   "notebook.lineNumbers": "on",
   "prisma.showPrismaDataPlatformNotification": false,
-  "jupyter.logging.level": "error"
+  "jupyter.logging.level": "error",
+  "github.copilot.editor.enableAutoCompletions": true
   // "sqltools.useNodeRuntime": false
 }
