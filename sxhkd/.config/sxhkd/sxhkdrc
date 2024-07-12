@@ -115,9 +115,23 @@ alt + Tab
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc monitor -f {west,east}
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+	
+# Focus desktops 11-20 on monitors DP-2 and DP-1
+super + grave + {1-9,0}
+    bspc desktop -f '{11,12,13,14,15,16,17,18,19,20}'
+	
+# Focus desktops 01-10 on monitors HDMI-0 and DP-5
+super + {1-9,0}
+    bspc desktop -f '{01,02,03,04,05,06,07,08,09,10}'
+
+# Send window to desktops 01-10 on monitors HDMI-0 and DP-5
+super + shift + {1-9,0}
+    bspc node -d '{01,02,03,04,05,06,07,08,09,10}'
+
+# Send window to desktops 11-20 on monitors DP-2 and DP-1
+super + shift + grave + {1-9,0}
+    bspc node -d '{11,12,13,14,15,16,17,18,19,20}'
+	
 super + d
 	bspc desktop -f 5 && bspc desktop -f 0
 super + shift + d

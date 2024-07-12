@@ -49,9 +49,9 @@
   "git.autofetch": true,
   "liveServer.settings.donotVerifyTags": true,
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": true,
-    "markdown": true,
+    "markdown": false,
     "scminput": false,
     "yaml": true
   },
