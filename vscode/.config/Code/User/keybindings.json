@@ -12,11 +12,11 @@
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "k"
   },
-  {
-    "command": "editor.toggleFold",
-    "key": "z z",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
+  // {
+  //   "command": "editor.toggleFold",
+  //   "key": "z z",
+  //   "when": "editorTextFocus && neovim.mode == normal"
+  // },
   {
     "key": "ctrl+c",
     "command": "-vscode-neovim.escape",
@@ -29,14 +29,6 @@
   },
   {
     "key": "ctrl+shift+i",
-    "command": "editor.action.sourceAction",
-    "args": {
-      "kind": "source.addMissingImports",
-      "apply": "first"
-    }
-  },
-  {
-    "key": "ctrl+shift+i",
     "command": "typescript.removeUnusedImports"
-  }
+  },
 ]
