@@ -1,0 +1,142 @@
+{
+  "telemetry.telemetryLevel": "off",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "editor.lineNumbers": "relative",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.sortImports": "explicit"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "redhat.telemetry.enabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "python.formatting.provider": "black",
+  "prettier.jsxSingleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "git.autofetch": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [],
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false
+  },
+  "docker.dockerPath": "/usr/local/bin/docker",
+  "settingsSync.ignoredSettings": [
+    "-docker.dockerPath"
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+  "vscode-neovim.compositeTimeout": 100,
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      // Use lua to execute any logic
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')",
+        ],
+      ],
+    },
+    "jl": {
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "-- Do nothing"
+        ],
+      ],
+    }
+  },
+  "notebook.output.scrolling": true,
+  "python.analysis.autoImportCompletions": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "cmake.configureOnOpen": false,
+  "cursor.cpp.disabledLanguages": [
+    "scminput",
+    "yaml"
+  ],
+  "cursor.chat.ghostTextAtSymbols": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "common",
+      "depth": 3
+    },
+    {
+      "name": "api",
+      "depth": 3
+    },
+    {
+      "name": "jobs",
+      "depth": 3
+    },
+    {
+      "name": "sklearn",
+      "depth": 2
+    },
+    {
+      "name": "matplotlib",
+      "depth": 2
+    },
+    {
+      "name": "scipy",
+      "depth": 2
+    },
+    {
+      "name": "django",
+      "depth": 2
+    },
+    {
+      "name": "flask",
+      "depth": 2
+    },
+    {
+      "name": "fastapi",
+      "depth": 2
+    }
+  ],
+  "cursor.cmdk.ghostTextAtSymbols": true
+}
