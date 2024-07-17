@@ -2,7 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plugins
-Plug 'asvetliakov/vim-easymotion'  " Replace Hop with EasyMotion
+Plug 'phaazon/hop.nvim'  " Replace EasyMotion with Hop
 Plug 'rhysd/clever-f.vim'  " Keep clever-f
 
 " Add any other plugins here
@@ -15,15 +15,19 @@ inoremap jk <Esc>
 inoremap <C-d> <C-d>zz
 inoremap <C-u> <C-u>zz
 
-" " EasyMotion configuration
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
-let g:EasyMotion_inc_highlight = 1 " Highlight as you type
-let g:EasyMotion_off_screen_search = 0 " Remove the 2-character limit
+" Hop configuration
+lua << EOF
+require'hop'.setup {
+  keys = 'etovxqpdygfblzhckisuran',
+  case_insensitive = true,
+  jump_on_sole_occurrence = true,
+  create_hl_autocmd = true,
+}
 
-" Use 'jl' to trigger EasyMotion's incremental search and clear highlights afterwardsnoh
-nmap jl <Plug>(easymotion-sn)
-omap jl <Plug>(easymotion-tn)
+vim.api.nvim_set_keymap('n', 'jl', "<cmd>HopPattern<CR>", {noremap = true})
+vim.api.nvim_set_keymap('o', 'jl', "<cmd>HopPattern<CR>", {noremap = true})
+vim.api.nvim_set_hl(0, 'HopPreview', { fg = '#e0e0e0', bg = '#303030' })
+EOF
 
 " clever-f.vim configuration
 let g:clever_f_ignore_case = 1
