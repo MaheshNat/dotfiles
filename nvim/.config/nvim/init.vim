@@ -3,7 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Plugins
 Plug 'phaazon/hop.nvim'  " Replace EasyMotion with Hop
-Plug 'rhysd/clever-f.vim'  " Keep clever-f
 
 " Add any other plugins here
 
@@ -28,7 +27,3 @@ vim.api.nvim_set_keymap('n', 'jl', "<cmd>HopPattern<CR>", {noremap = true})
 vim.api.nvim_set_keymap('o', 'jl', "<cmd>HopPattern<CR>", {noremap = true})
 vim.api.nvim_set_hl(0, 'HopPreview', { fg = '#e0e0e0', bg = '#303030' })
 EOF
-
-" clever-f.vim configuration
-let g:clever_f_ignore_case = 1
-let g:clever_f_smart_case = 1
