@@ -24,25 +24,12 @@
       "source.organizeImports": "explicit"
     }
   },
-  "python.formatting.provider": "black",
   "prettier.jsxSingleQuote": true,
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
   "git.autofetch": true,
   "liveServer.settings.donotVerifyTags": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
-  "vim.operatorPendingModeKeyBindings": [],
   "github.copilot.enable": {
     "*": false,
     "plaintext": true,
@@ -51,9 +38,6 @@
     "yaml": false
   },
   "docker.dockerPath": "/usr/local/bin/docker",
-  "settingsSync.ignoredSettings": [
-    "-docker.dockerPath"
-  ],
   "git.openRepositoryInParentFolders": "never",
   "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
   "vscode-neovim.compositeTimeout": 100,
@@ -65,7 +49,7 @@
         [
           "local code = require('vscode')",
           "code.action('vscode-neovim.escape')",
-          "code.action('workbench.action.files.save')",
+          // "code.action('workbench.action.files.save')",
         ],
       ],
     },
@@ -138,5 +122,6 @@
       "depth": 2
     }
   ],
-  "cursor.cmdk.ghostTextAtSymbols": true
+  "cursor.cmdk.ghostTextAtSymbols": true,
+  "explorer.confirmDragAndDrop": false
 }

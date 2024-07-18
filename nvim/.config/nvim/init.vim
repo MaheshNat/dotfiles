@@ -27,3 +27,6 @@ vim.api.nvim_set_keymap('n', 'jl', "<cmd>HopPattern<CR>", {noremap = true})
 vim.api.nvim_set_keymap('o', 'jl', "<cmd>HopPattern<CR>", {noremap = true})
 vim.api.nvim_set_hl(0, 'HopPreview', { fg = '#e0e0e0', bg = '#303030' })
 EOF
+
+" Set a lower timeoutlen (default is 1000ms)
+set timeoutlen=75

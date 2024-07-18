@@ -31,4 +31,8 @@
     "key": "ctrl+shift+i",
     "command": "typescript.removeUnusedImports"
   },
+  {
+    "key": "alt+n",
+    "command": "vscode-neovim.restart"
+  },
 ]
