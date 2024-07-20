@@ -11,6 +11,7 @@ call plug#end()
 
 set clipboard=unnamedplus
 inoremap jk <Esc>
+nnoremap no :noh<CR>
 inoremap <C-d> <C-d>zz
 inoremap <C-u> <C-u>zz
 
@@ -29,4 +30,4 @@ vim.api.nvim_set_hl(0, 'HopPreview', { fg = '#e0e0e0', bg = '#303030' })
 EOF
 
 " Set a lower timeoutlen (default is 1000ms)
-set timeoutlen=75
+set timeoutlen=150

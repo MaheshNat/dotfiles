@@ -10,19 +10,26 @@
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "liveServer.settings.donotShowInfoMsg": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.sortImports": "explicit"
-  },
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": "explicit",
+  //   "source.sortImports": "explicit"
+  // },
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
   "redhat.telemetry.enabled": false,
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
-    }
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
   },
   "prettier.jsxSingleQuote": true,
   "javascript.preferences.quoteStyle": "single",
