@@ -130,5 +130,8 @@
     }
   ],
   "cursor.cmdk.ghostTextAtSymbols": true,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "cursor.cpp.enablePartialAccepts": true,
+  "cmake.showOptionsMovedNotification": false,
+  "cursor.general.enableShadowWorkspace": true
 }
