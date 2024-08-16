@@ -7,8 +7,6 @@ return {
       autojump = false
     },
     label = {
-      after = false,
-      before = true,
       style = 'overlay'
     }
   },
