@@ -46,7 +46,7 @@
   },
   "docker.dockerPath": "/usr/local/bin/docker",
   "git.openRepositoryInParentFolders": "never",
-  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.lua",
   "vscode-neovim.compositeTimeout": 100,
   "vscode-neovim.compositeKeys": {
     "jk": {
@@ -60,14 +60,6 @@
         ],
       ],
     },
-    "jl": {
-      "command": "vscode-neovim.lua",
-      "args": [
-        [
-          "-- Do nothing"
-        ],
-      ],
-    }
   },
   "notebook.output.scrolling": true,
   "python.analysis.autoImportCompletions": true,
