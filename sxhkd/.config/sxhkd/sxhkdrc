@@ -46,7 +46,7 @@ super + shift + p
 
 # generates random password from bitwarden, copies to clipboard
 super + b
-	bw generate --lowercase --uppercase --number --special --length 34 | xclip -selection clipboard
+	$HOME/.local/bin/generate_password
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -69,14 +69,6 @@ super + shift + f
 # program launcher
 super + space
 	rofi -terminal alacritty -show drun
-
-# notifications
-# ctrl + space
-#   dunstctl close
-# ctrl + shift + space
-#   dunstctl close-all
-# ctrl + shift + period
-#   dunstctl context
 
 #
 # bspwm hotkeys
