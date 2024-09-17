@@ -142,3 +142,10 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+# rotate (horizontal -> vertical splitting)
+super + r
+    bspc node @parent -R 90 || bspc node @/ -R 90
+
+# Cursor prompts
+super + o
+    $HOME/.local/bin/cursor_prompts_script

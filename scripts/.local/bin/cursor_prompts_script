@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Directory containing prompt files
+PROMPT_DIR="$HOME/.local/bin/cursor_prompts"
+
+# Use rofi to select a prompt
+selected_prompt=$(ls "$PROMPT_DIR" | sed 's/\.txt$//' | rofi -dmenu -i -p "Select a prompt:")
+
+# Check if a prompt was selected
+if [ -z "$selected_prompt" ]; then
+    exit 0
+fi
+
+PROMPT_FILE="$PROMPT_DIR/${selected_prompt}.txt"
+
+# Check if the prompt file exists
+if [ ! -f "$PROMPT_FILE" ]; then
+    notify-send "Error" "Prompt file '$PROMPT_FILE' not found."
+    exit 1
+fi
+
+# Copy the contents of the prompt file to clipboard
+cat "$PROMPT_FILE" | xclip -selection clipboard
+
+notify-send "Prompt Copied" "Prompt '${selected_prompt}' copied to clipboard."

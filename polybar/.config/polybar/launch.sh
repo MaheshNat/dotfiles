@@ -10,7 +10,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar main -c $(dirname $0)/scaled_config.ini &
 
 # left config
-if [[ $(xrandr -q | grep 'HDMI-0 connected') ]]; then
+if [[ $(xrandr -q | grep 'DP-5 connected') ]]; then
     polybar external -c $(dirname $0)/left_config.ini &
 fi
 

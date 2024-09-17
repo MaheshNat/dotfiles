@@ -108,3 +108,4 @@ bindkey -v
 source /usr/share/nvm/init-nvm.sh
 
 eval "$(zoxide init --cmd cd zsh)"
+. "/home/mahesh/.local/share/cargo/env"

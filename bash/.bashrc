@@ -36,3 +36,5 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # default workspace for Executors
 
 # JINA_CLI_END
+
+. "/home/mahesh/.local/share/cargo/env"

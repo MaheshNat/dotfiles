@@ -2,8 +2,8 @@
 
 # bspc monitor DP-1 -d 11 12 13 14 15
 # bspc monitor DP-2 -d 16 17 18 19 20
-bspc monitor HDMI-0 -d 01 02 03 04 05
-bspc monitor DP-5 -d 06 07 08 09 10
+bspc monitor DP-5 -d 01 02 03 04 05
+bspc monitor HDMI-0 -d 06 07 08 09 10
 bspc monitor DP-1 -d 16 17 18 19 20
 bspc monitor DP-2 -d 11 12 13 14 15
 
