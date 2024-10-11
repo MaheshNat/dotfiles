@@ -3,15 +3,7 @@ function hgrep() {
 }
 
 function mgrok() {
-  ssh -N -R localhost:4242:localhost:$1 ubuntu@tunnel.maheshnatamai.com;
-}
-
-function agrok() {
-  ssh -N -R localhost:4242:localhost:$1 mahesh@tunnel.automorphic.ai;
-}
-
-function acgrok() {
-  ssh -N -R localhost:4545:localhost:$1 mahesh@api.automorphic.ai
+  ssh -N -R localhost:4242:localhost:$1 orion;
 }
 
 function gitp() {
