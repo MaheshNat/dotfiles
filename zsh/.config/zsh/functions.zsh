@@ -6,6 +6,10 @@ function mgrok() {
   ssh -N -R localhost:4242:localhost:$1 orion;
 }
 
+function mpgrok() {
+  ssh -N -R localhost:4243:localhost:$1 orion;
+}
+
 function gitp() {
   git add . && git commit -m $1 && git push;
 }
